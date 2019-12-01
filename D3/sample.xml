@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CUPOY>
+    <Title>爬蟲馬拉松</Title>
+    <Author>Wei</Author>
+    <Chapters>
+        <Chapter name="01">資料來源與存取</Chapter>
+        <Chapter name="02">靜態網頁爬蟲</Chapter>
+        <Chapter name="03">動態網頁爬蟲</Chapter>
+    </Chapters>
+</CUPOY>
