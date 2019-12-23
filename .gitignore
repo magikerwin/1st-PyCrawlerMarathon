@@ -1,4 +1,5 @@
 data/*
+chromedriver_win32/*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
