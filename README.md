@@ -22,4 +22,13 @@ Personal uploading space for the [1st-Python-Crawler-Marathon](https://pycrawler
 - Day 013 : \[Exercise\] Posts Crawler for PTT
 - Day 014 : \[Exercise\] Moives Crawler for Yahoo
 - Day 015 : \[Exercise\] Financial Crawler for BANK OF TAIWAN
-- Day 016 : 
+- Day 016 : \[Exercise\] Relevant Keyword Crawler for Wikipedia
+
+## :triangular_flag_on_post: Crawling Dynamic Webpages
+- Day 017 : AJAX (Asynchronous JavaScript and XML)
+- Day 018 : Browser Developer Tools
+- Day 019 : Scraping with JavaScript Support by Selenium
+- Day 020 : Scraping without JavaScript Support by Request API
+- Day 021 : \[Exercise\] News Crawler for ETTODAY
+- Day 022 : \[Exercise\] Air Quality Index Crawler for EPA
+- Day 023 : \[Exercise\] News Crawler for ETTODAY Finance
