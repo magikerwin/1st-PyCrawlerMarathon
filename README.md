@@ -32,3 +32,7 @@ Personal uploading space for the [1st-Python-Crawler-Marathon](https://pycrawler
 - Day 021 : \[Exercise\] News Crawler for ETTODAY
 - Day 022 : \[Exercise\] Air Quality Index Crawler for EPA
 - Day 023 : \[Exercise\] News Crawler for ETTODAY Finance
+- Day 024 : \[Exercise\] Jobs Crawler for 104
+
+## :triangular_flag_on_post: Crawling Dynamic Webpages
+- Day 025 : Web crawling for multiple websites
