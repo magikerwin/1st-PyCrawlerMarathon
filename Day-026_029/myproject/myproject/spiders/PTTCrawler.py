@@ -1,22 +1,23 @@
 # -*- coding: utf-8 -*-
 import scrapy
-
 import re
 from bs4 import BeautifulSoup
-from urllib.parse import urljoin
+from urllib.parse import urljoin, urlparse
+from pathlib import Path
 from pprint import pprint
+from ..items import PTTArticleItem
 
-
+# 範例目標網址: https://www.ptt.cc/bbs/Gossiping/M.1557928779.A.0C1.html
 class PttcrawlerSpider(scrapy.Spider):
     name = 'PTTCrawler'
     allowed_domains = ['www.ptt.cc']
-    start_urls = ['https://www.ptt.cc/bbs/C_Chat/M.1577882759.A.51A.html']
+    start_urls = ['https://www.ptt.cc/bbs/Gossiping/M.1557928779.A.0C1.html']
     cookies = {'over18': '1'}
-	
+
     def start_requests(self):
         for url in self.start_urls:
             yield scrapy.Request(url=url, callback=self.parse, cookies=self.cookies)
-	
+
     def parse(self, response):
         # 假設網頁回應不是 200 OK 的話, 我們視為傳送請求失敗
         if response.status != 200:
@@ -24,7 +25,7 @@ class PttcrawlerSpider(scrapy.Spider):
             return
 
         # 將網頁回應的 HTML 傳入 BeautifulSoup 解析器, 方便我們根據標籤 (tag) 資訊去過濾尋找
-        soup = BeautifulSoup(response.text)
+        soup = BeautifulSoup(response.text, features="xml")
 
         
         # 取得文章內容主體
@@ -127,14 +128,15 @@ class PttcrawlerSpider(scrapy.Spider):
         message_count = {'all': p+b+n, 'count': p-b, 'push': p, 'boo': b, 'neutral': n}
         
         # 整理文章資訊
-        data = {
-            'url': response.url,
-            'article_author': author,
-            'article_title': title,
-            'article_date': date,
-            'article_content': content,
-            'ip': ip,
-            'message_count': message_count,
-            'messages': messages
-        }
+        data = PTTArticleItem()
+        article_id = str(Path(urlparse(response.url).path).stem)
+        data['url'] = response.url
+        data['article_id'] = article_id
+        data['article_author'] = author
+        data['article_title'] = title
+        data['article_date'] = date
+        data['article_content'] = content
+        data['ip'] = ip
+        data['message_count'] = message_count
+        data['messages'] = messages
         yield data
