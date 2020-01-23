@@ -10,14 +10,23 @@ from ..items import PTTArticleItem
 # 範例目標網址: https://www.ptt.cc/bbs/Gossiping/M.1557928779.A.0C1.html
 class PttcrawlerSpider(scrapy.Spider):
     name = 'PTTCrawler'
-    allowed_domains = ['www.ptt.cc']
-    start_urls = ['https://www.ptt.cc/bbs/Gossiping/M.1557928779.A.0C1.html']
-    cookies = {'over18': '1'}
-
+    
+    def __init__(self, urls_txt_path, output_path=None):
+        # get target urls list
+        start_urls = []
+        with open(urls_txt_path, 'r') as f:
+            for line in f.readlines():
+                start_urls.append(line.replace("\n",""))
+        
+        self.cookies = {'over18': '1'}
+        self.start_urls = start_urls
+        self.output_path = output_path
+        super().__init__()
+		
     def start_requests(self):
         for url in self.start_urls:
             yield scrapy.Request(url=url, callback=self.parse, cookies=self.cookies)
-
+        
     def parse(self, response):
         # 假設網頁回應不是 200 OK 的話, 我們視為傳送請求失敗
         if response.status != 200:

@@ -37,3 +37,6 @@ Personal uploading space for the [1st-Python-Crawler-Marathon](https://pycrawler
 ## :triangular_flag_on_post: [Scrapy](https://en.wikipedia.org/wiki/Scrapy)
 - Day 025 : Web crawling for multiple websites
 - Day 026 : start project, generate spider
+- Day 027 : XPath, Item Pipeline
+- Day 028 : API
+- Day 029 : start project, generate spider
