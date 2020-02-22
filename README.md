@@ -40,3 +40,18 @@ Personal uploading space for the [1st-Python-Crawler-Marathon](https://pycrawler
 - Day 027 : XPath, Item Pipeline
 - Day 028 : API
 - Day 029 : start project, generate spider
+
+## :triangular_flag_on_post: Advanced Crawling Techniques
+- Day 030 : Problems That You May Encounter During Crawling
+- Day 031 : Anti-Crawler(1/5) Header Checking
+- Day 032 : Anti-Crawler(2/5) [Captcha](https://en.wikipedia.org/wiki/CAPTCHA)
+- Day 033 : Anti-Crawler(4/5) Logging in, [Cookies](https://en.wikipedia.org/wiki/HTTP_cookie)
+- Day 034 : Anti-Crawler(5/5) IP tracking
+- Day 035 : Speed-up(1/2) [Multi-threading](https://en.wikipedia.org/wiki/Multithreading_(computer_architecture))
+- Day 036 : Speed-up(2/2 [Asyncio](https://en.wikipedia.org/wiki/Asynchronous_I/O)
+- Day 037 : [Schedule](https://schedule.readthedocs.io/en/stable/)
+
+## :triangular_flag_on_post: Final Project
+- Day 038 : Final Project
+- Day 039 : Final Project
+- Day 040 : Final Project
