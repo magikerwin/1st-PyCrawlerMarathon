@@ -2,7 +2,7 @@
 
 Personal uploading space for the [1st-Python-Crawler-Marathon](https://pycrawler.cupoy.com/), which is a marathon of training your web crawling skill.
 
-<img src=https://pycrawler.cupoy.com/images/landing.png>
+<img src="./cover.png" class="center" width=960>
 
 ### :trophy: [Certificate] https://github.com/magikerwin1993/1st-PyCrawlerMarathon/blob/master/Certificate.pdf
 
